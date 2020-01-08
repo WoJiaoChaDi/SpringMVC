@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.version>4.1.3.RELEASE</spring.version>
+        <spring.version>5.2.0.RELEASE</spring.version>
         <aopalliance.version>1.0</aopalliance.version>
         <aspectjweaver-version>1.9.3</aspectjweaver-version>
         <pagehelper.version>5.1.2-beta</pagehelper.version>
@@ -46,6 +46,9 @@
         <cglib-version>3.2.5</cglib-version>
         <apache.ant-version>1.10.2</apache.ant-version>
         <apache.taglibs-version>1.2.5</apache.taglibs-version>
+        <org.aspectj.version>1.8.7</org.aspectj.version>
+
+
     </properties>
 
     <dependencyManagement>
@@ -130,14 +133,35 @@
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
             </dependency>
-
-            <!-- Spring表达式语言相关依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-expression</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
+            <!--Aop - Aspectj-->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${org.aspectj.version}</version>
+            </dependency>
+
+            <!-- Spring表达式语言相关依赖 -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-tx</artifactId>
@@ -147,12 +171,6 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
@@ -180,13 +198,6 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aspects</artifactId>
                 <version>${spring.version}</version>
-            </dependency>
-
-            <!-- aspectjweaverjar包主要是提供了一个java agent用于在 类加载期 -->
-            <dependency>
-                <groupId>org.aspectj</groupId>
-                <artifactId>aspectjweaver</artifactId>
-                <version>${aspectjweaver-version}</version>
             </dependency>
 
             <!-- 包含了针对面向切面的接口。 通常Spring等其它具备动态织入功能的框架依赖此包。 -->
