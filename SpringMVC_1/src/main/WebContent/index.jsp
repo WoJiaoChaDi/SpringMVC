@@ -17,6 +17,8 @@
 	<form action="/springmvc/testMethod" method="post">
 		<input type="submit" value="TestMethodPost">
 	</form>
+	<br>
+	<a href="springmvc/testParamsAndHeaders?username=atguigu&age=11">testParamsAndHeaders</a>
 
 </body>
 </html>
