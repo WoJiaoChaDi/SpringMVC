@@ -9,8 +9,14 @@
 <body>
 
 	<a href="helloworld">Hello World</a>
-
-	<a href="springmvc/helloworld">Hello World 2</a>
+	<br>
+	<a href="springmvc/testRequestMapping">TestRequestMethod</a>
+	<br>
+	<a href="springmvc/testMethod">TestMethod</a>
+	<br>
+	<form action="/springmvc/testMethod" method="post">
+		<input type="submit" value="TestMethodPost">
+	</form>
 
 </body>
 </html>
