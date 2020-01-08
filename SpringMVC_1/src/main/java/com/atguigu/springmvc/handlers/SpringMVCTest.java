@@ -46,4 +46,16 @@ public class SpringMVCTest {
         return SUCCESS;
     }
 
+    /**
+     * Ant 风格资源地址支持 3 种匹配符：
+     *      ?：匹配文件名中的一个字符
+     *      *：匹配文件名中的任意字符
+     *      **：** 匹配多层路径
+     */
+    @RequestMapping("/testAntPath/*/abc")
+    public String testAntPath() {
+        System.out.println("testAntPath");
+        return SUCCESS;
+    }
+
 }

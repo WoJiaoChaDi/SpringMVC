@@ -19,6 +19,10 @@
 	</form>
 	<br>
 	<a href="springmvc/testParamsAndHeaders?username=atguigu&age=11">testParamsAndHeaders</a>
+	<br>
+	<a href="springmvc/testAntPath/ASDSFWEAREWRFEWTDSAGDFGREYTR/abc">testAntPath</a>
+	<br>
+	<a href="springmvc/testPathVariable/102">testPathVariable</a>
 
 </body>
 </html>
