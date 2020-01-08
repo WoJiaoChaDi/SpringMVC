@@ -3,6 +3,8 @@ package com.atguigu.springmvc.handlers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+//RequestMapping 路径定义  web项目/类/方法   所以类没有定义的话就是： web项目/方法
+@RequestMapping("/springmvc")
 @Controller
 public class HelloWorld {
 

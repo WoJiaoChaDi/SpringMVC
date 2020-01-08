@@ -9,6 +9,8 @@
 <body>
 
 	<a href="helloworld">Hello World</a>
-	
+
+	<a href="springmvc/helloworld">Hello World 2</a>
+
 </body>
 </html>
