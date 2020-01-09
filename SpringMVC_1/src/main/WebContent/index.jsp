@@ -68,6 +68,9 @@
 	</form>
 	<br><br>
 
+	<a href="springmvc/testServletAPI">Test ServletAPI</a>
+	<br><br>
+
 
 </body>
 </html>
