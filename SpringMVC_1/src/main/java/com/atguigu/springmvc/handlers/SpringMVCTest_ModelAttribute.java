@@ -31,6 +31,9 @@ public class SpringMVCTest_ModelAttribute {
 
             //这个key值必须和下面的方法的入参类型的第一个字母小写的字符串一致
             map.put("user", user);
+
+            //如果是其他名字，则需要在handler方法的入参出 使用 @ModelAttribute("abc") 来指定获取哪个一个
+            map.put("abc", user);
         }
     }
 
@@ -76,7 +79,8 @@ public class SpringMVCTest_ModelAttribute {
      * 4). 把 WebDataBinder 的 target 作为参数传递给目标方法的入参.
      */
     @RequestMapping("/testModelAttribute")
-    public String testModelAttribute(User user){
+    //public String testModelAttribute(User user){
+    public String testModelAttribute(@ModelAttribute("abc") User user){
         System.out.println("修改: " + user);
         return SUCCESS;
     }
