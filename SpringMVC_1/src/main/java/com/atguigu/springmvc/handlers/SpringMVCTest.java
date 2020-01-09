@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RequestMapping("/springmvc")
 @Controller
@@ -87,9 +88,9 @@ public class SpringMVCTest {
      * 在 SpringMVC 的目标方法中如何得到 id 呢? 使用 @PathVariable 注解
      *
      */
-    @RequestMapping(value = "/testRest/{id}", method = RequestMethod.GET)
-    public String testRest(@PathVariable Integer id) {
-        System.out.println("testRest GET: " + id);
+    @RequestMapping(value = "/testRest/{id}/{id2}", method = RequestMethod.GET)
+    public String testRest(@PathVariable Integer id, @PathVariable Integer id2) {
+        System.out.println("testRest GET: " + id + ":" + id2);
         return SUCCESS;
     }
 
@@ -108,6 +109,20 @@ public class SpringMVCTest {
     @RequestMapping(value = "/testRest/{id}", method = RequestMethod.DELETE)
     public String testRestDelete(@PathVariable Integer id) {
         System.out.println("testRest DELETE: " + id);
+        return SUCCESS;
+    }
+
+    /**
+     * @RequestParam 来映射请求参数.
+     * value 值即请求参数的参数名
+     * required 该参数是否必须. 默认为 true
+     * defaultValue 请求参数的默认值
+     */
+    @RequestMapping(value = "/testRequestParam")
+    public String testRequestParam(
+            @RequestParam(value = "username") String un,
+            @RequestParam(value = "age", required = false, defaultValue = "0") int age) {
+        System.out.println("testRequestParam, username: " + un + ", age: " + age);
         return SUCCESS;
     }
 
