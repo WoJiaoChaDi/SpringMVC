@@ -11,6 +11,9 @@
 	<a href="ViewResolver/testViewAndViewResolver">testViewAndViewResolver</a>
 	<br>
 
+	<a href="/ViewResolver/testView">testView</a>
+	<br><br>
+
 
 </body>
 </html>

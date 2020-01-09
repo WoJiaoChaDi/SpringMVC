@@ -14,4 +14,11 @@ public class SpringMVCTest_ViewResolver {
         System.out.println("testViewAndViewResolver");
         return SUCCESS;
     }
+
+    //自定义视图解析器
+    @RequestMapping("/testView")
+    public String testView(){
+        System.out.println("testView");
+        return "helloView";
+    }
 }
