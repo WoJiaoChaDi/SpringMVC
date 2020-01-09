@@ -42,7 +42,13 @@
 		<input type="submit" value="TestRest DELETE">
 	</form>
 	<br>
-	<a href="springmvc/testRequestParam?username=111">testRequestParam</a>
+		<a href="springmvc/testRequestParam?username=111">testRequestParam</a>
+	<br>
+	<br>
+		<a href="springmvc/testRequestHeader">testRequestHeader</a>
+	<br>
+	<br>
+		<a href="springmvc/testCookieValue">testCookieValue</a>
 	<br>
 </body>
 </html>
