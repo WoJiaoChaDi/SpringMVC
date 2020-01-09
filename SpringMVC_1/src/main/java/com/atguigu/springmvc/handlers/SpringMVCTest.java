@@ -111,12 +111,24 @@ public class SpringMVCTest {
     @RequestMapping(value = "/testRest/{id}", method = RequestMethod.PUT)
     public String testRestPut(@PathVariable Integer id) {
         System.out.println("testRest PUT: " + id);
+        //Tomcat8.0会报错：JSPs only permit GET POST or HEAD
+        //原因：JSP页面只支持GET、POST、HEAD请求方法
+        //解决方案：
+        //    1.用tomcat7.0一下版本
+        //    2.请求现转给Controller,再返回JSP页面
+        //    3.在文件头部的jsp指令中,添加 isErrorPage="true"
         return SUCCESS;
     }
 
     @RequestMapping(value = "/testRest/{id}", method = RequestMethod.DELETE)
     public String testRestDelete(@PathVariable Integer id) {
         System.out.println("testRest DELETE: " + id);
+        //Tomcat8.0会报错：JSPs only permit GET POST or HEAD
+        //原因：JSP页面只支持GET、POST、HEAD请求方法
+        //解决方案：
+        //    1.用tomcat7.0一下版本
+        //    2.请求现转给Controller,再返回JSP页面
+        //    3.在文件头部的jsp指令中,添加 isErrorPage="true"
         return SUCCESS;
     }
 
