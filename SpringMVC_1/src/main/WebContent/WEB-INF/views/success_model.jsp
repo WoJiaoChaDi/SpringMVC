@@ -11,5 +11,9 @@
 	
 	<h4>Sucess Page</h4>
 	time:${requestScope.time}
+	<br>
+	names: ${requestScope.names }
+	<br>
+
 </body>
 </html>
