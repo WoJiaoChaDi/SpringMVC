@@ -1,5 +1,6 @@
 package com.atguigu.springmvc.handlers;
 
+import com.atguigu.springmvc.entities.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -147,6 +148,16 @@ public class SpringMVCTest {
     @RequestMapping("/testCookieValue")
     public String testCookieValue(@CookieValue("JSESSIONID") String sessionId) {
         System.out.println("testCookieValue: sessionId: " + sessionId);
+        return SUCCESS;
+    }
+
+    /**
+     * Spring MVC 会按请求参数名和 POJO 属性名进行自动匹配， 自动为该对象填充属性值。支持级联属性。
+     * 如：dept.deptId、dept.address.tel 等
+     */
+    @RequestMapping("/testPojo")
+    public String testPojo(User user) {
+        System.out.println("testPojo: " + user);
         return SUCCESS;
     }
 }
