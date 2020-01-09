@@ -12,6 +12,9 @@
 	<br>
 	<a href="springmvc_model/testMap">testMap</a>
 	<br>
+	<a href="springmvc_model/testSessionAttributes">testSessionAttributes</a>
+	<br>
+
 
 
 </body>
