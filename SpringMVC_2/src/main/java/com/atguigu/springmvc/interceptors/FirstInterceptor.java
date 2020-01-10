@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//自定义拦截器
 public class FirstInterceptor implements HandlerInterceptor{
 
 	/**
@@ -23,7 +24,7 @@ public class FirstInterceptor implements HandlerInterceptor{
 	}
 
 	/**
-	 * 调用目标方法之后, 但渲染视图之前.
+	 * 这个方法在调用目标方法之后, 但渲染视图之前.
 	 * 可以对请求域中的属性或视图做出修改.
 	 */
 	@Override
@@ -34,7 +35,7 @@ public class FirstInterceptor implements HandlerInterceptor{
 	}
 
 	/**
-	 * 渲染视图之后被调用. 释放资源
+	 * 这个方法在渲染视图之后被调用. 释放资源
 	 */
 	@Override
 	public void afterCompletion(HttpServletRequest request,
