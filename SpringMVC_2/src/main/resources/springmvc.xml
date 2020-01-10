@@ -44,11 +44,11 @@
 		<property name="basename" value="i18n"></property>
 	</bean>
 	
-	<!-- 配置 SessionLocalResolver -->
+	<!-- 配置 SessionLocalResolver  -->
 	<bean id="localeResolver"
 		class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
 	
-	<!--<mvc:interceptors>-->
+	<mvc:interceptors>
 		<!--&lt;!&ndash; 配置自定义的拦截器 &ndash;&gt;-->
 		<!--<bean class="com.atguigu.springmvc.interceptors.FirstInterceptor"></bean>-->
 		<!---->
@@ -57,15 +57,15 @@
 			<!--<mvc:mapping path="/emps"/>-->
 			<!--<bean class="com.atguigu.springmvc.interceptors.SecondInterceptor"></bean>-->
 		<!--</mvc:interceptor>-->
-		<!---->
-		<!--&lt;!&ndash; 配置 LocaleChanceInterceptor &ndash;&gt;-->
-		<!--<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>-->
-	<!--</mvc:interceptors>-->
+
+		<!-- 配置 LocaleChanceInterceptor -->
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+	</mvc:interceptors>
 	
 	<!--  
 	<mvc:view-controller path="/i18n" view-name="i18n"/>
 	-->
-	<!--<mvc:view-controller path="/i18n2" view-name="i18n2"/>-->
+	<mvc:view-controller path="/i18n2" view-name="i18n2"/>
 	
 	<!-- 配置 MultipartResolver -->
 	<!--<bean id="multipartResolver"-->

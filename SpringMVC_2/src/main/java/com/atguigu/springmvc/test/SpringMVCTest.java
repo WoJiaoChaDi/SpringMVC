@@ -95,6 +95,7 @@ public class SpringMVCTest {
         return "success";
     }
 
+    //国际化
     @RequestMapping("/i18n")
     public String testI18n(Locale locale){
         String val = messageSource.getMessage("i18n.user", null, locale);
