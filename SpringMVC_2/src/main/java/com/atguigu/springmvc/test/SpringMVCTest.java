@@ -46,6 +46,7 @@ public class SpringMVCTest {
         return "success";
     }
 
+    //定制错误码和信息
     @ResponseStatus(reason="测试",value=HttpStatus.NOT_FOUND)
     @RequestMapping("/testResponseStatusExceptionResolver")
     public String testResponseStatusExceptionResolver(@RequestParam("i") int i){
