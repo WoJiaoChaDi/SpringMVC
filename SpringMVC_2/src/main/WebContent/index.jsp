@@ -8,6 +8,8 @@
 	<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
         $(function(){
+
+            //测试jason
             $("#testJson").click(function(){
                 var url = this.href;
                 var args = {};
