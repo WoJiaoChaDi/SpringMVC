@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//指定路径的拦截器
 public class SecondInterceptor implements HandlerInterceptor{
 
 	/**
@@ -19,7 +20,7 @@ public class SecondInterceptor implements HandlerInterceptor{
 	public boolean preHandle(HttpServletRequest request,
 							 HttpServletResponse response, Object handler) throws Exception {
 		System.out.println("[SecondInterceptor] preHandle");
-		return false;
+		return true;
 	}
 
 	/**
