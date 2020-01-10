@@ -119,6 +119,17 @@
             <artifactId>jackson-annotations</artifactId>
         </dependency>
 
+        <!-- 文件上传组件 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+
+        <!-- 一款处理io流的工具,封装了很多处理io流和文件的方法 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

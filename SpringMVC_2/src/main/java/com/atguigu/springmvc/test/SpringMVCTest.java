@@ -86,6 +86,7 @@ public class SpringMVCTest {
         return "success";
     }
 
+    //文件的上传
     @RequestMapping("/testFileUpload")
     public String testFileUpload(@RequestParam("desc") String desc,
                                  @RequestParam("file") MultipartFile file) throws IOException{
