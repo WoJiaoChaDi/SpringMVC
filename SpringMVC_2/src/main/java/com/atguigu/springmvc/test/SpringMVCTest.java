@@ -102,6 +102,7 @@ public class SpringMVCTest {
         return "i18n";
     }
 
+    //文件下载
     @RequestMapping("/testResponseEntity")
     public ResponseEntity<byte[]> testResponseEntity(HttpSession session) throws IOException{
         byte [] body = null;
@@ -119,6 +120,7 @@ public class SpringMVCTest {
         return response;
     }
 
+    //文件上传
     @ResponseBody
     @RequestMapping("/testHttpMessageConverter")
     public String testHttpMessageConverter(@RequestBody String body){
@@ -126,6 +128,7 @@ public class SpringMVCTest {
         return "helloworld! " + new Date();
     }
 
+    //返回jason
     @ResponseBody
     @RequestMapping("/testJson")
     public Collection<Employee> testJson(){
