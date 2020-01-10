@@ -9,7 +9,7 @@ public class SpringMVCTestExceptionHandler {
 
     @ExceptionHandler({ArithmeticException.class})
     public ModelAndView handleArithmeticException(Exception ex){
-        System.out.println("----> 出异常了: " + ex);
+        System.out.println("----> 出异常了--算术异常: " + ex);
         ModelAndView mv = new ModelAndView("error");
         mv.addObject("exception", ex);
         return mv;
