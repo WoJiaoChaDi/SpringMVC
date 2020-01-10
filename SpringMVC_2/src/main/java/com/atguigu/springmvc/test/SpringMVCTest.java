@@ -33,6 +33,7 @@ public class SpringMVCTest {
     @Autowired
     private ResourceBundleMessageSource messageSource;
 
+    //配置xx异常转向的页面
     @RequestMapping("/testSimpleMappingExceptionResolver")
     public String testSimpleMappingExceptionResolver(@RequestParam("i") int i){
         String [] vals = new String[10];

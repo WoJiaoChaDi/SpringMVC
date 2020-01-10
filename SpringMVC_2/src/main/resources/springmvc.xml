@@ -75,13 +75,14 @@
 	</bean>
 	
 	<!-- 配置使用 SimpleMappingExceptionResolver 来映射异常 -->
-	<!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
-		<!--<property name="exceptionAttribute" value="ex"></property>-->
-		<!--<property name="exceptionMappings">-->
-			<!--<props>-->
-				<!--<prop key="java.lang.ArrayIndexOutOfBoundsException">error</prop>-->
-			<!--</props>-->
-		<!--</property>-->
-	<!--</bean>	-->
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionAttribute" value="ex"></property>
+		<property name="exceptionMappings">
+			<props>
+				<!--配置数组越界异常转向的页面-->
+				<prop key="java.lang.ArrayIndexOutOfBoundsException">error</prop>
+			</props>
+		</property>
+	</bean>
 		
 </beans>
