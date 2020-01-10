@@ -40,6 +40,7 @@ public class SpringMVCTest {
         return "success";
     }
 
+    //转成Http的异常类（非POST请求，将异常转成Http的异常）
     @RequestMapping(value="/testDefaultHandlerExceptionResolver",method=RequestMethod.POST)
     public String testDefaultHandlerExceptionResolver(){
         System.out.println("testDefaultHandlerExceptionResolver...");
