@@ -49,8 +49,8 @@
         <apache.ant-version>1.10.2</apache.ant-version>
         <apache.taglibs-version>1.2.5</apache.taglibs-version>
         <org.aspectj.version>1.8.7</org.aspectj.version>
-
-
+        <validation.version>1.1.0.Final</validation.version>
+        <hivernate-validator.version>5.2.4.Final</hivernate-validator.version>
     </properties>
 
     <dependencyManagement>
@@ -232,6 +232,18 @@
                 <groupId>taglibs</groupId>
                 <artifactId>standard</artifactId>
                 <version>${taglibs.version}</version>
+            </dependency>
+
+            <!--Java验证 @Email @Past @NotEmpty-->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hivernate-validator.version}</version>
             </dependency>
 
             <!-- MyBatis的分页插件 -->
