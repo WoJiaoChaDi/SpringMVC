@@ -51,7 +51,7 @@
         <apache.taglibs-version>1.2.5</apache.taglibs-version>
         <org.aspectj.version>1.8.7</org.aspectj.version>
         <validation.version>1.1.0.Final</validation.version>
-        <hivernate-validator.version>5.2.4.Final</hivernate-validator.version>
+        <hivernate-validator.version>5.3.6.Final</hivernate-validator.version>
         <jackson.version>2.9.8</jackson.version>
     </properties>
 
